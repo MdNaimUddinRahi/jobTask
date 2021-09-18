@@ -83,7 +83,10 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        //
+        $input = $request->all();
+        $updateTask = $task->updateorCreate(['id' => $task->id], $input);
+        // dd($updateTask);
+        return $updateTask;
     }
 
     /**
@@ -94,6 +97,8 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        $data = $task->delete();
+        return $data;
+        // dd($data);
     }
 }

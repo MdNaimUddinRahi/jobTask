@@ -5,7 +5,10 @@
  */
 
 require('./bootstrap');
+// require('./bootstrap');
 
+//jquery components
+require('./jquery/bootstrap-notify/bootstrap-notify');
 /**
  * Next, we will create a fresh React component instance and attach it to
  * the page. Then, you may begin adding components to this application
